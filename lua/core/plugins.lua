@@ -1,5 +1,11 @@
 require("lazy").setup({
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  
+  {
+    "catppuccin/nvim", 
+    name = "catppuccin",
+    priority = 1000 
+  },
+  
   "tpope/vim-commentary",
   "mattn/emmet-vim",
   "nvim-tree/nvim-tree.lua",
@@ -15,13 +21,13 @@ require("lazy").setup({
   "tpope/vim-fugitive",
   "tpope/vim-surround",
   "stevearc/oil.nvim",
+  
   -- completion
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
   "L3MON4D3/LuaSnip",
   "saadparwaiz1/cmp_luasnip",
   "rafamadriz/friendly-snippets",
-  "github/copilot.vim",
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
@@ -36,5 +42,19 @@ require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim", tag = "0.1.4",
     dependencies = { "nvim-lua/plenary.nvim" }
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
   },
 })
